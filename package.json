@@ -1,0 +1,26 @@
+{
+  "name": "hybrid",
+  "version": "0.1.0",
+  "description": "Test project",
+  "main": "lib/index.js",
+  "author": "Tóth Márk Zoltán <zollee60@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "neon-cli": "^0.6.0",
+    "node-pre-gyp": "^0.17.0"
+  },
+  "scripts": {
+    "install": "node-pre-gyp install --fallback-to-build=false || neon build --release",
+    "package": "node-pre-gyp package"
+  },
+  "devDependencies": {
+    "node-pre-gyp-github": "^1.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username-here/your-project-here.git"
+  },
+  "files": [
+    "lib"
+  ],
+}

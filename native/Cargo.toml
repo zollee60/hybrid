@@ -1,0 +1,19 @@
+[package]
+name = "hybrid"
+version = "0.1.0"
+authors = ["Tóth Márk Zoltán <zollee60@gmail.com>"]
+license = "MIT"
+build = "build.rs"
+edition = "2018"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "hybrid"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.6.0"
+
+[dependencies]
+neon = "0.6.0"
+num_cpus = "1.4.0"
