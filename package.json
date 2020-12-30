@@ -11,16 +11,25 @@
   },
   "scripts": {
     "install": "node-pre-gyp install --fallback-to-build=false || neon build --release",
-    "package": "node-pre-gyp package"
+    "package": "node-pre-gyp package",
+    "upload-binary": "node-pre-gyp package && node-pre-gyp-github publish"
   },
   "devDependencies": {
     "node-pre-gyp-github": "^1.4.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username-here/your-project-here.git"
+    "url": "git+https://github.com/zollee60/hybrid.git"
   },
   "files": [
     "lib"
   ],
+  "binary": {
+    "module_name": "index",
+    "host": "https://github.com/zollee60/hybrid/releases/download/",
+    "remote_path": "{version}",
+    "package_name": "{node_abi}-{platform}-{arch}.tar.gz",
+    "module_path": "./native",
+    "pkg_path": "."
+  },
 }
